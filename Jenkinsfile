@@ -31,8 +31,8 @@ pipeline {
                 bat '''
                     docker login -u %DOCKER_USER% -p %DOCKER_PASS%
                     docker push %DOCKER_IMAGE%:%BUILD_NUMBER%
-                    docker tag %DOCKER_IMAGE%:%BUILD_NUMBER% %DOCKER_IMAGE%:latest
-                    docker push %DOCKER_IMAGE%:latest
+                    docker tag %DOCKER_IMAGE%:%BUILD_NUMBER% %DOCKER_IMAGE%:local
+                    docker push %DOCKER_IMAGE%:local
                 '''
             }
         }
@@ -57,3 +57,4 @@ pipeline {
         }
     }
 }
+
