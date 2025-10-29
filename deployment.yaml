@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: simple-interest
-        image: your-dockerhub-username/simple-interest-app:local
+        image: niharika345/simple-interest-app:local
         ports:
         - containerPort: 5000
+
 
