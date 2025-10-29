@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-interest-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-interest
+  template:
+    metadata:
+      labels:
+        app: simple-interest
+    spec:
+      containers:
+      - name: simple-interest
+        image: your-dockerhub-username/simple-interest-app:latest
+        ports:
+        - containerPort: 5000
